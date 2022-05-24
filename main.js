@@ -54,6 +54,14 @@ function addProducts(products) {
         addProduct(product);
     });
 
+    productsList.querySelectorAll('.remove-product').forEach((button) => {
+        button.addEventListener('click', () => {
+            button.closest('.product').remove();
+
+            updateTotals();
+        });
+    });
+
     updateTotals();
 }
 
