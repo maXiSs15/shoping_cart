@@ -53,6 +53,23 @@ function addProducts(products) {
         product.total = product.quantity * product.price;
         addProduct(product);
     });
+
+    updateTotals();
+}
+
+function updateTotals() {
+    let productsCost = 0;
+
+    productsList.querySelectorAll('.product-total').forEach(totalElement => {
+        productsCost += parseFloat(totalElement.innerHTML);
+    });
+
+    document.querySelector('#totals-products').textContent = productsCost.toFixed(2);
+
+    const shippingCost = document.querySelector('#totals-shipping').textContent;
+    const totalCost = Number(productsCost + Number(shippingCost));
+
+    document.querySelector('#totals-total').textContent = totalCost.toFixed(2);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
