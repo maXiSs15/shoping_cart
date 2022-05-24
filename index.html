@@ -7,10 +7,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 </head>
 
 <body>
-
+    <div class="container">
+        <div class="shopping-cart my-4">
+            <h1 class="h2 mb-3">Shopping cart</h1>
+            <div class="row">
+                <div class="col-9">
+                    <div class="card cart-products">
+                        <div class="card-header">Products</div>
+                        <ul id="products-list" class="list-group list-group-flush">
+                            <li class="list-group-item product">
+                                <div class="row align-items-center">
+                                    <div class="col-1">
+                                        <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="col-5">
+                                        <h3 class="h5">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h3>
+                                        <p class="product-description lh-sm mb-0 text-muted"><small>Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday</small></p>
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <span class="h4 my-0">&dollar;<span class="product-price">109.95</span></span>
+                                    </div>
+                                    <div class="col-1">
+                                        <div class="input-group">
+                                            <input type="number" class="form-control" value="1" min="1" max="999">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <span class="h4 my-0">&dollar;<span class="product-total">109.95</span></span>
+                                    </div>
+                                    <div class="col-1">
+                                        <button class="btn btn-secondary remove-product" title="Remove" aria-label="Remove">
+                                      <i class="bi bi-trash3-fill"></i>
+                                    </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card cart-totals">
+                        <div class="card-header">Totals</div>
+                        <ul id="totals-list" class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong>Products:</strong>
+                                    </div>
+                                    <div class="col text-end">&dollar;<span id="totals-products">0</span></div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong>Shipping:</strong>
+                                    </div>
+                                    <div class="col text-end">&dollar;<span id="totals-shipping">20</span></div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <strong>Total:</strong>
+                                    </div>
+                                    <div class="col text-end">&dollar;<span id="totals-total">0</span></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100">Checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
